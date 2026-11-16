@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface WorkLink {
+  name: string;
+  description: string;
+  href: string;
+  tag?: string;
+}
+
+const links: WorkLink[] = [
+  {
+    name: 'ACKB',
+    description: 'Ascend CCEC & PTX instruction interface knowledge base',
+    href: 'https://mmyy1217.github.io/ACKB/',
+    tag: 'Live UI',
+  },
+  {
+    name: 'TileLang',
+    description: 'TVM / TIR lowering and AscendC tile kernel compilation',
+    href: 'https://github.com/mmyy1217/tilelang',
+  },
+  {
+    name: 'Triton-Ascend',
+    description: 'SIMD / SIMT mixed compilation and compiler backend work',
+    href: 'https://github.com/mmyy1217/triton-ascend',
+  },
+  {
+    name: 'GitHub',
+    description: 'Public repositories under @mmyy1217',
+    href: 'https://github.com/mmyy1217',
+  },
+];
+---
+
+<BaseLayout>
+  <main class="page-shell">
+    <section class="index-sheet" aria-labelledby="statement-heading">
+      <h1 id="statement-heading" class="statement">I work on AI Compilers.</h1>
+      <p class="lead">
+        Public index for instruction knowledge bases, kernel lowering, and compiler tooling.
+      </p>
+
+      <nav aria-label="Public projects and links">
+        <ul class="index-list">
+          {
+            links.map((item) => (
+              <li class="index-item">
+                <a class="index-link" href={item.href}>
+                  <span class="index-main">
+                    <span class="index-title">{item.name}</span>
+                    <span class="index-desc">{item.description}</span>
+                  </span>
+                  <span class="index-trail">
+                    {item.tag && <span class="index-tag">{item.tag}</span>}
+                    <svg
+                      class="index-arrow"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4.5 11.5L11.5 4.5M11.5 4.5H5.75M11.5 4.5V10.25"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="square"
+                        stroke-linejoin="miter"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <footer class="sheet-footer">
+        <span>mmyy1217.github.io</span>
+        <span>@mmyy1217</span>
+      </footer>
+    </section>
+  </main>
+</BaseLayout>
