@@ -1,0 +1,1 @@
+{"content": "# 分析：短 KV 关闭三级流水\n- contract: operator-harness/node-task@4\n- project_id: flex256\n- run_id: review-serial\n- search_node_id: N2\n- node: analysis\n- operation: 比较两个独立进程的精度与性能\n\n核查 serial 两次原始测量，并与相同轮次的 base 比较。\n"}

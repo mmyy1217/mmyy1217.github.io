@@ -1,0 +1,1 @@
+{"content": "# 配对复核启动开销\n- contract: operator-harness/node-task@4\n- project_id: flex256\n- run_id: paired-alias\n- node: analysis\n- search_node_id: N1\n- operation: 同进程交替比较\n\n复核独立进程结果不一致的 alias 路径。\n"}
