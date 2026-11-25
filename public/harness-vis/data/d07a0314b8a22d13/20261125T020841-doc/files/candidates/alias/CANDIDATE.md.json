@@ -1,0 +1,1 @@
+{"content": "# 减少启动端地址查询\n- contract: operator-harness/candidate@2\n- project_id: flex256\n- candidate_id: alias\n- search_node_id: N1\n- parent_candidate: base\n\n在输出别名检查中复用地址区间，保留输入检查。\n"}

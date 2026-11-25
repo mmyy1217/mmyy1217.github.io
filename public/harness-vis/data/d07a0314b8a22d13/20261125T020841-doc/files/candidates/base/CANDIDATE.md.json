@@ -1,0 +1,1 @@
+{"content": "# 原始 Inductor 模板\n- contract: operator-harness/candidate@2\n- project_id: flex256\n- candidate_id: base\n- search_node_id: N0\n- parent_candidate: not_applicable\n\n原始版本，实测以建立对照。\n"}

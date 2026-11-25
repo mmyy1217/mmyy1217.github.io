@@ -1,0 +1,1 @@
+{"content": "# 小序列 FlexAttention 优化\n源自 Inductor-Template 504581038a examples/flex_attention/dense.py。Q/K/V 均为 BF16 [1,4,256,128]。保持完整 FP32 参考校验 atol=rtol=0.03；性能比较固定同机同卡的预热后单次 forward NPU event 延迟。\n"}
