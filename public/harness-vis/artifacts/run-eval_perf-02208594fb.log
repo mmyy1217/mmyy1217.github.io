@@ -1,0 +1,9 @@
+$ make bench RESULTS_DIR=results/rmsnorm-tuning/A3/bench-3
+# exit_code=0 duration_s=0.2708
+
+--- STDOUT ---
+./build/rmsnorm_harness --bench --rows 4096 --cols 4096 --warmup 10 --iters 50 --metric-json results/rmsnorm-tuning/A3/bench-3/metrics.json
+device=NVIDIA GeForce RTX 4080 Laptop GPU sm=89 shape=4096x4096 latency_ms=0.3444 bandwidth_gbps=389.77
+
+--- STDERR ---
+

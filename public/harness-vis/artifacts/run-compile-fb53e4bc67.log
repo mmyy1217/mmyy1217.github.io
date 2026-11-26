@@ -1,0 +1,8 @@
+$ make build
+# exit_code=0 duration_s=1.4395
+
+--- STDOUT ---
+nvcc -O3 -std=c++17 -arch=sm_89 -lineinfo -Xcompiler "-Wall -Wextra" kernel.cu harness.cu -o build/rmsnorm_harness
+
+--- STDERR ---
+

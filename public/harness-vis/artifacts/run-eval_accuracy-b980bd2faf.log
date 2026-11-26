@@ -1,0 +1,10 @@
+$ make verify
+# exit_code=2 duration_s=0.0064
+
+--- STDOUT ---
+./build/rmsnorm_harness --verify --rows 4096 --cols 4096
+
+--- STDERR ---
+CUDA error at harness.cu:110: CUDA driver version is insufficient for CUDA runtime version
+make: *** [Makefile:25: verify] Error 1
+

@@ -1,0 +1,7 @@
+$ nvcc -O3 -std=c++17 -arch=sm_89 -lineinfo -Xcompiler '-Wall -Wextra' results/rmsnorm-tuning/A2/kernel.cu harness.cu -o build/rmsnorm-tuning/A2/rmsnorm_harness
+# exit_code=0 duration_s=1.3909
+
+--- STDOUT ---
+
+--- STDERR ---
+

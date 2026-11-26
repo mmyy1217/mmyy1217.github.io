@@ -1,0 +1,9 @@
+$ make verify ROWS=3 COLS=31
+# exit_code=0 duration_s=0.1406
+
+--- STDOUT ---
+./build/rmsnorm_harness --verify --rows 3 --cols 31
+verify_status=PASS max_abs_err=1.192e-07 tol=1.0e-04
+
+--- STDERR ---
+

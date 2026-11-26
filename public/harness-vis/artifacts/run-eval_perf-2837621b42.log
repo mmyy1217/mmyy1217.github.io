@@ -1,0 +1,8 @@
+$ ./build/rmsnorm-tuning/A1/rmsnorm_harness --bench --rows 4096 --cols 4096 --warmup 10 --iters 50 --metric-json results/rmsnorm-tuning/A1/paired-3/metrics.json
+# exit_code=0 duration_s=0.3207
+
+--- STDOUT ---
+device=NVIDIA GeForce RTX 4080 Laptop GPU sm=89 shape=4096x4096 latency_ms=1.4956 bandwidth_gbps=89.75
+
+--- STDERR ---
+
