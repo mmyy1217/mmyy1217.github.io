@@ -1,0 +1,117 @@
+{
+  "operator": "topk",
+  "implementation": "deferred",
+  "mode": "benchmark",
+  "suite": "primary",
+  "config": {
+    "dtype": "float32",
+    "seed": 0,
+    "warmup": 30,
+    "repeat": 50,
+    "inputs": [
+      "normal",
+      "ties",
+      "equal",
+      "infinities",
+      "lane_hot"
+    ],
+    "primary_stress": "lane_hot",
+    "smoke": "64x256-k8",
+    "primary": "1024x1024-k8",
+    "cases": [
+      [
+        64,
+        256,
+        8
+      ],
+      [
+        128,
+        512,
+        1
+      ],
+      [
+        128,
+        384,
+        7
+      ],
+      [
+        64,
+        64,
+        64
+      ],
+      [
+        512,
+        512,
+        8
+      ],
+      [
+        512,
+        2048,
+        16
+      ],
+      [
+        1024,
+        1024,
+        8
+      ]
+    ]
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post2",
+    "tilelang_commit": "fa8562aa04d265c3f0f8458e0dd19704f448d9a7",
+    "device": "Ascend950PR_9579"
+  },
+  "cases": [
+    {
+      "case": "1024x1024-k8",
+      "rows": 1024,
+      "width": 1024,
+      "k": 8,
+      "correctness": [
+        "normal"
+      ],
+      "latency_ms": 0.24457320000000002,
+      "event_span_ms": 0.22347524642944336,
+      "profile": {
+        "dur_ns": 244573.2,
+        "aic_total_cycles": 0,
+        "aic_mad": 0.0,
+        "aic_scalar": 0.0,
+        "aic_mte1": 0.0,
+        "aic_mte2": 0.0,
+        "aic_mte3": 0.0,
+        "aic_fixpipe": 0.0,
+        "aiv_total_cycles": 1944400,
+        "aiv_vec": 0.32207714098053297,
+        "aiv_scalar": 0.04354319535889879,
+        "aiv_mte2": 0.6582612062225283,
+        "aiv_mte3": 0.09565999767194228
+      },
+      "stress": {
+        "input": "lane_hot",
+        "latency_ms": 0.24652316,
+        "event_span_ms": 1.205550537109375,
+        "profile": {
+          "dur_ns": 246523.16,
+          "aic_total_cycles": 0,
+          "aic_mad": 0.0,
+          "aic_scalar": 0.0,
+          "aic_mte1": 0.0,
+          "aic_mte2": 0.0,
+          "aic_mte3": 0.0,
+          "aic_fixpipe": 0.0,
+          "aiv_total_cycles": 2009055,
+          "aiv_vec": 0.3134865719522327,
+          "aiv_scalar": 0.030942982080387545,
+          "aiv_mte2": 0.6804355042328456,
+          "aiv_mte3": 0.0908726822815645
+        }
+      }
+    }
+  ],
+  "timing": "TileLang msprof mean device time (ms)",
+  "latency_ms": 0.24457320000000002,
+  "status": "passed"
+}

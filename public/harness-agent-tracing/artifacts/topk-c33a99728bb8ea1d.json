@@ -1,0 +1,160 @@
+{
+  "operator": "topk",
+  "implementation": "deferred_decoded",
+  "mode": "correctness",
+  "suite": "full",
+  "config": {
+    "dtype": "float32",
+    "seed": 0,
+    "warmup": 30,
+    "repeat": 50,
+    "inputs": [
+      "normal",
+      "ties",
+      "equal",
+      "infinities",
+      "lane_hot"
+    ],
+    "primary_stress": "lane_hot",
+    "smoke": "64x256-k8",
+    "primary": "1024x1024-k8",
+    "cases": [
+      [
+        64,
+        256,
+        8
+      ],
+      [
+        128,
+        512,
+        1
+      ],
+      [
+        128,
+        384,
+        7
+      ],
+      [
+        64,
+        64,
+        64
+      ],
+      [
+        512,
+        512,
+        8
+      ],
+      [
+        512,
+        2048,
+        16
+      ],
+      [
+        1024,
+        1024,
+        8
+      ]
+    ]
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post2",
+    "tilelang_commit": "fa8562aa04d265c3f0f8458e0dd19704f448d9a7",
+    "device": "Ascend950PR_9579"
+  },
+  "cases": [
+    {
+      "case": "64x256-k8",
+      "rows": 64,
+      "width": 256,
+      "k": 8,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "128x512-k1",
+      "rows": 128,
+      "width": 512,
+      "k": 1,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "128x384-k7",
+      "rows": 128,
+      "width": 384,
+      "k": 7,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "64x64-k64",
+      "rows": 64,
+      "width": 64,
+      "k": 64,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "512x512-k8",
+      "rows": 512,
+      "width": 512,
+      "k": 8,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "512x2048-k16",
+      "rows": 512,
+      "width": 2048,
+      "k": 16,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    },
+    {
+      "case": "1024x1024-k8",
+      "rows": 1024,
+      "width": 1024,
+      "k": 8,
+      "correctness": [
+        "normal",
+        "ties",
+        "equal",
+        "infinities",
+        "lane_hot"
+      ]
+    }
+  ],
+  "status": "passed"
+}
